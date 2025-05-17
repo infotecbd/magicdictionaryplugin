@@ -15,18 +15,7 @@ add_action('wp_enqueue_scripts', 'magic_dictionary_enqueue_assets');
 function magic_dictionary_enqueue_assets() {
 
 
-    wp_enqueue_style(
-        'magic-dictionary-css',
-        plugin_dir_url(__FILE__) . 'assets/css/magic-dictionary.css',
-        array(),
-        '1.1'
-    );
+    wp_enqueue_style('magic-dictionary-css', plugin_dir_url(__FILE__) . 'assets/css/magic-dictionary.css', array(), '1.1');
 
-    wp_enqueue_script(
-        'magic-dictionary-js',
-        plugin_dir_url(__FILE__) . 'assets/js/magic-dictionary.js',
-        array(),
-        '1.1',
-        true
-    );
+    wp_enqueue_script('magic-dictionary-js', plugin_dir_url(__FILE__) . 'assets/js/magic-dictionary.js', array(), '1.1', true);
 }
